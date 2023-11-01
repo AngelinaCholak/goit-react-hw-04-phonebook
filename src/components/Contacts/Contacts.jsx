@@ -1,15 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import css from './contacts.module.css';
 
-export default class Contacts extends Component {
-  static propTypes = {
-    contacts: PropTypes.array.isRequired,
-    handleDeleteContact: PropTypes.func.isRequired,
-  };
+export const Contacts= (props) => {
 
-  render() {
-    const { contacts, handleDeleteContact } = this.props;
+    const { contacts, handleDeleteContact } = props;
 
     return (
       <ul className={css.contactsList}>
@@ -23,5 +18,10 @@ export default class Contacts extends Component {
         ))}
       </ul>
     );
-  }
 }
+  Contacts.propTypes = {
+    contacts: PropTypes.array.isRequired,
+    handleDeleteContact: PropTypes.func.isRequired,
+  };
+
+export default Contacts;

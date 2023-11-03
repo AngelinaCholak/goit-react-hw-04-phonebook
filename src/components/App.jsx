@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import PhoneBook from './PhoneBook/PhoneBook';
 import Contacts from './Contacts/Contacts';
 import Filter from './Filter/Filter';
+import css from './App.module.css';
 
 export const App = () => {
   const [contacts, setContacts] = useState(() => {
@@ -65,8 +66,8 @@ export const App = () => {
     const filteredContacts = getFilteredContacts();
 
     return (
-      <div>
-        <h1>Phonebook</h1>
+      <div className={css.container}>
+        <h1 className={css.title}>Phonebook</h1>
         <PhoneBook handleAddContact={handleAddContact} />
         <h2>Contacts</h2>
         <Filter filter={filter} handleFilterChange={handleFilterChange} />

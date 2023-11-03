@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import css from './PhoneBook.module.css';
-
+import { GoPersonAdd } from 'react-icons/go';
 export const PhoneBook = ({ handleAddContact }) => {
 
   const [name, setName] = useState('');
@@ -24,26 +24,31 @@ export const PhoneBook = ({ handleAddContact }) => {
 
   return (
     <form className={css.phoneBookForm} onSubmit={handleSubmit}>
-      <h2>Name</h2>
-      <input
-        className={css.phoneBookInput}
-        type="text"
-        name="name"
-        required
-        value={name}
-        onChange={handleInputChange}
-      />
-      <h2>Number</h2>
-      <input
-        className={css.phoneBookInput}
-        type="tel"
-        name="number"
-        required
-        value={number}
-        onChange={handleInputChange}
-      />
+      <div className={css.inputContainer}>
+        <h2>Name</h2>
+        <input
+          className={css.phoneBookInput}
+          type="text"
+          name="name"
+          required
+          value={name}
+          onChange={handleInputChange}
+        />
+      </div>
+      <div className={css.inputContainer}>
+        <h2>Number</h2>
+        <input
+          className={css.phoneBookInput}
+          type="tel"
+          name="number"
+          required
+          value={number}
+          onChange={handleInputChange}
+        />
+      </div>
       <br />
       <button type="submit" className={css.phoneBookButton}>
+        <GoPersonAdd className={css.SearchFormButtonLabel} size={20} />
         Add contact
       </button>
     </form>

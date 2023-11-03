@@ -1,20 +1,19 @@
 
 ul {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
- 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
 }
 
-
 li {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin: 10px auto;
+  display: block;
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 
@@ -27,8 +26,8 @@ li {
     margin-left: 10px;
 }
 
-h2, h1 {
-    padding-left: 40px;
-    font-size: 18px;
-    margin-top: 10px;
-}
+/* h2 {
+  display: block;
+  text-align: left; 
+margin: 0;
+} */
